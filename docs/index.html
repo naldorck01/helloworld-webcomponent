@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Webcomponent</title>
+        <style>
+            my-hello-world {
+                --secondary-color: #80deea;
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <section>
+                <h1>Webcomponent Hello World</h1>
+                <h3>Example usage</h3>
+            </section>
+            <my-hello-world begin-date="10/10/2020">
+                <span slot="title">Javascript</span>
+                <div slot="description">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Provident molestiae eaque quas adipisci! Modi, sapiente. Officia
+                    tempora consequuntur numquam facere, ex ea iste deserunt sint
+                    delectus! Modi sequi quia fugiat!
+                </div>
+            </my-hello-world>
+            <my-hello-world begin-date="10/10/2020" end-date="12/11/2020" keywords="[vue, javascript]" class="blue">
+                <span slot="title">VUE</span>            
+            </my-hello-world>
+            <section class="box__container" begin-date="10/10/2020">
+                <my-hello-world>
+                    <span slot="title" class="text--gray">Javascript</span>
+                    <div slot="description">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                        Provident molestiae eaque quas adipisci! Modi, sapiente. Officia
+                        tempora consequuntur numquam facere, ex ea iste deserunt sint
+                        delectus! Modi sequi quia fugiat!
+                    </div>
+                </my-hello-world>
+            </section>
+        </main>        
+        <script
+            async
+            type="module"
+            src="./components/MyHelloWorld/index.js"
+        ></script>
+    </body>
+</html>
